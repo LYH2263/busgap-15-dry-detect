@@ -133,9 +133,11 @@ h1 { margin: 0 0 0.25rem; font-size: 1.25rem; font-weight: 700; }
 }
 .bg-gap-strip.bg-bunch { border-top-color: var(--bg-red); }
 .bg-gap-strip.bg-large { border-top-color: var(--bg-amber); }
+.bg-gap-strip.bg-strip-preview { border-top-style: dashed; opacity: 0.9; }
 .bg-gap-strip header {
   padding: 0.65rem 0.7rem 0.4rem;
   font-size: 0.8rem; font-weight: 700;
+  display: flex; justify-content: space-between; align-items: center; gap: 0.4rem;
 }
 .bg-gap-strip .bg-gap-body {
   flex: 1; padding: 0.4rem 0.7rem 0.8rem;
@@ -169,6 +171,40 @@ th { color: var(--bg-dim); font-weight: 600; font-size: 0.78rem; }
 }
 .btn:hover { filter: brightness(1.08); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-preview {
+  background: transparent; color: var(--bg-cyan);
+  border: 1px solid var(--bg-cyan);
+}
+.btn-preview:hover { background: rgba(46,196,255,0.12); filter: none; }
+
+.bg-actions { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.8rem; }
+.bg-actions input {
+  flex: 1 1 260px; max-width: 360px;
+  background: var(--bg-slate); color: var(--bg-text);
+  border: 1px solid var(--bg-edge);
+  padding: 0.45rem 0.7rem; font-size: 0.85rem;
+}
+.bg-actions input:focus { outline: none; border-color: var(--bg-cyan); }
+
+.bg-reports {
+  display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;
+  margin-bottom: 0.7rem; font-size: 0.82rem;
+}
+.bg-report-chip {
+  padding: 0.25rem 0.6rem; cursor: pointer;
+  background: var(--bg-slate); border: 1px solid var(--bg-edge);
+  color: var(--bg-dim); font-size: 0.76rem;
+}
+.bg-report-chip:hover { color: var(--bg-text); border-color: var(--bg-cyan); }
+.bg-report-chip.on { color: var(--bg-text); border-color: var(--bg-cyan); background: rgba(46,196,255,0.12); }
+
+.bg-mode {
+  margin-bottom: 0.8rem; padding: 0.5rem 0.75rem;
+  font-size: 0.8rem; border-left: 3px solid var(--bg-edge);
+  background: var(--bg-panel);
+}
+.bg-mode-preview { border-left-color: var(--bg-amber); color: var(--bg-amber); }
+.bg-mode-saved { border-left-color: var(--bg-ok); color: var(--bg-ok); }
 .muted { color: var(--bg-dim); }
 .stat { font-size: 1.55rem; font-weight: 800; }
 
